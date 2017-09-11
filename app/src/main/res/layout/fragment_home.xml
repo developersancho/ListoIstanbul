@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="#d00606">
+
+    <FrameLayout
+        android:id="@+id/dim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0"
+        android:background="@color/dimBg"
+        android:fitsSystemWindows="true"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <fragment
+        android:id="@+id/map_home"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <sf.cuboidcirclebutton.CuboidButton
+        android:id="@+id/cbtnSearch"
+        android:layout_width="153dp"
+        android:layout_height="142dp"
+        android:layout_centerInParent="true"
+        android:text="PARK YERİ ARA"
+        android:textColor="@color/colorwhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cub_border_radius="0dp"
+        app:cub_color="#d00606"
+        app:cub_hover_color="@color/color_EBEBEB"
+        app:cub_riple_effect="true"
+        app:layout_constraintRight_toRightOf="@+id/map_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/map_home"
+        app:layout_constraintVertical_bias="0.876"
+        tools:ignore="HardcodedText"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <include layout="@layout/content_slide_up_menu_view" />
+
+</android.support.constraint.ConstraintLayout>
