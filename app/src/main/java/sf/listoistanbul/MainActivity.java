@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import sf.listoistanbul.fragment.HomeFragment;
+import sf.listoistanbul.fragment.InformationFragment;
 import sf.residemenu.ResideMenu;
 import sf.residemenu.ResideMenuItem;
 
@@ -39,7 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resideMenu = new ResideMenu(this);
         resideMenu.setBackground(R.drawable.img_back3);
         resideMenu.attachToActivity(this);
-        resideMenu.setScaleValue(0.6f);
+        resideMenu.setScaleValue(0.8f);
+        resideMenu.setUse3D(true);
+        resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_LEFT);
 
         rMenuHome = new ResideMenuItem(this, R.drawable.ic_home_white_24dp, "ANASAYFA");
         rMenuInformation = new ResideMenuItem(this, R.drawable.ic_group_work_white_24dp, "BİLGİLENDİRME");
@@ -65,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view == rMenuHome) {
             changeFragment(new HomeFragment());
         } else if (view == rMenuInformation) {
-
+            changeFragment(new InformationFragment());
         } else if (view == rMenuAbout) {
 
         }

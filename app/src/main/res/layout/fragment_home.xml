@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:fitsSystemWindows="true"
     android:background="#d00606">
 
     <FrameLayout
@@ -14,14 +13,14 @@
         android:alpha="0"
         android:background="@color/dimBg"
         android:fitsSystemWindows="true"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
 
     <fragment
         android:id="@+id/map_home"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,12 +42,12 @@
         app:cub_color="#d00606"
         app:cub_hover_color="@color/color_EBEBEB"
         app:cub_riple_effect="true"
-        app:layout_constraintRight_toRightOf="@+id/map_home"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/map_home"
         app:layout_constraintTop_toTopOf="@+id/map_home"
         app:layout_constraintVertical_bias="0.876"
-        tools:ignore="HardcodedText"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        tools:ignore="HardcodedText" />
 
     <include layout="@layout/content_slide_up_menu_view" />
 
